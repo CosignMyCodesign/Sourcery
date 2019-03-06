@@ -1,11 +1,12 @@
 from django.conf.urls import url
+from django.urls import path
 
 from . import views
 
 app_name = "sourcery"
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
-    url(r'^login$', views.login_user, name='login'),
-    url(r'^logout$', views.user_logout, name='logout'),
-    url(r'^register$', views.register, name='register'),
+    path('', views.index, name='index'),
+    path('login', views.login_user, name='login'),
+    path('logout', views.user_logout, name='logout'),
+    path('register', views.register, name='register'),
 ]

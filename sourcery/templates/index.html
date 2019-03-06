@@ -3,15 +3,15 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Bangazon</title>
+    <title>Sourcery</title>
   </head>
   <body>
-    <h1>Welcome to Bangazon!</h1>
+    <h1>Welcome to Sourcery!</h1>
     {% if user.is_authenticated %}
-    <h1>Bangazon says... hello {{ user.username }}!</h1>
+    <h1> Greetings {{ user.username }}, Let's make the magic happen!</h1>
     <a href="{% url 'sourcery:logout' %}">Logout</a>
     {% else %}
-    <h1>Bangazon says...</h1>
+    <h1>Sourcery says...</h1>
     <div><a href="{% url 'sourcery:register' %}">Register</a></div>
     <div><a href="{% url 'sourcery:login' %}">Login</a></div>
     {% endif %}
