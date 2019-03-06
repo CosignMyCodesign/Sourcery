@@ -6,12 +6,12 @@
     <title>Bangazon</title>
   </head>
   <body>
-    <h1>Sell Product</h1>
+    <!-- <h1>Sell Product</h1> -->
 
 
-    <form action="{% url 'website:sell' %}" method="post">
+    <form action="{% url 'sourcery:sell' %}" method="post">
       {% csrf_token %}
-      {{ product_form.as_p }}
+      <!-- {{ product_form.as_p }} -->
       <input type="submit" value="Sell It" />
     </form>
   </body>
