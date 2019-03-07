@@ -1,0 +1,11 @@
+{% load staticfiles %}
+{% block types %}
+<div class="type_container">
+    <div class="list-group">
+        
+        {% for type in all_types %}
+        <a href="#" class="list-group-item list-group-item-action">{{ type.name }}</a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock types %}

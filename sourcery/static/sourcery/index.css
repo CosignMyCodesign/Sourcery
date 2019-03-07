@@ -47,3 +47,9 @@ a:hover {
     display: flex;
     justify-content: center;
 }
+
+.type_container {
+    display: flex;
+    width: 100px;
+    margin-top: 20px;
+}

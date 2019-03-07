@@ -3,13 +3,16 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.shortcuts import render
 from django.template import RequestContext
+from sourcery.models import Resource_Type
 
 from sourcery.forms import UserForm
 # from sourcery.models import Product
 
 def index(request):
     template_name = 'index.html'
-    return render(request, template_name, {})
+    all_types = Resource_Type.objects.all()
+    context = {'all_types': all_types}
+    return render(request, template_name, context)
 
 
 # Create your views here.
