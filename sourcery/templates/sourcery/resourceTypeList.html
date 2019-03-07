@@ -1,0 +1,17 @@
+
+
+{% block types %}
+<div class="container">
+<h1 class="mt-4 mb-3">All Resource Types</h1>
+
+<ul class="list-group">
+    {% for type in all_types %}
+    <div class='grid-container'>
+    <li class="list-group-item"><a class="text-info" href="">
+        <div class="grid-item"><h4>{{ type.name }}</h4></div></a>
+    </div>
+    {% endfor %}
+</ul>
+
+</div>
+{% endblock %}

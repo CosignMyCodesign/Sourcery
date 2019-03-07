@@ -25,6 +25,9 @@
     {% if user.is_authenticated %}
   </br>
     <h3> Greetings {{ user.username }}. Let's make the magic happen!</h3>
+        {% block types %}
+        {% include "sourcery/resourceTypeList.html" %}
+        {% endblock types %}
     {% else %}
     <h5>Please login or register above</h5>
     {% endif %}
