@@ -21,13 +21,13 @@
         {% block nav %}
         {% include "sourcery/navbar.html" %}
         {% endblock nav %}
-    <h1>Welcome to Sourcery!</h1>
+    <h1  class="display-4 center">Welcome to Sourcery!</h1>
     {% if user.is_authenticated %}
   </br>
-    <h3> Greetings {{ user.username }}. Let's make the magic happen!</h3>
-        {% block types %}
-        {% include "sourcery/resourceTypeList.html" %}
-        {% endblock types %}
+    <h3 class="lead"> Greetings {{ user.username }}. Let's make the magic happen!</h3>
+    {%block types%}
+    {% include "sourcery/resourceTypeList.html" %}
+    {%endblock types%}
     {% else %}
     <h5>Please login or register above</h5>
     {% endif %}
