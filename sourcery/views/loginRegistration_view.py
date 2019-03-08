@@ -10,7 +10,8 @@ from sourcery.forms import UserForm
 
 def index(request):
     template_name = 'index.html'
-    all_types = Resource_Type.objects.all()
+    current_user = request.user
+    all_types = Resource_Type.objects.filter(user_id=current_user.id)
     context = {'all_types': all_types}
     return render(request, template_name, context)
 
