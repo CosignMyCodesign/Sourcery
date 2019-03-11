@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="resource_container">
+    {% if all_resources %}
+        <div class="row">
+        {% for resource in all_resources %}
+        <div class="col-sm">
+            <div class="card bg-dark text-white">
+                <div class="card-body">
+                    <h5 class="card-title mb-4 text-center">{{ resource.title }}</h5>
+                    <h6>URL: {{resource.url}}</h6>
+                    <h6>Note: {{resource.note}}</h6>
+                    <div class="card-btn">
+                    <a class="card-link" href=""><button type="button" class="btn btn-outline-info mt-3">Go here</button></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+            {% endfor %}
+    </div>
+    {% else %}
+        <p>No Resources Available.</p>
+    {% endif %}
+    <a href=""><button type="button" class="btn btn-info mt-3">Create New Resource</button></a>
+
+</div>
+{% endblock content %}

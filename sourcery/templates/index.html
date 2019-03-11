@@ -25,10 +25,16 @@
     {% if user.is_authenticated %}
   </br>
     <h3 class="lead"> Greetings {{ user.username }}. Let's make the magic happen!</h3>
+    <div class="index_container">
     {%block types%}
     {% include "sourcery/resourceTypeList.html" %}
     {%endblock types%}
+
+    {% block content %}
+    {% endblock content %}
+    </div>
     {% else %}
+
     <h5>Please login or register above</h5>
     {% endif %}
   </body>
