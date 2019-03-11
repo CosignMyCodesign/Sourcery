@@ -1,5 +1,16 @@
 {% load staticfiles %}
 {% block types %}
+<div class="container">
+    <h1 class="mt-4 mb-3">Add a Resource Type </h1>
+    
+    <form action="" method='POST'>
+        {% csrf_token %}
+        <label for="resource_type_name">Create Resource Type</label>
+        <input type="text" name="resource_type_name" id="type_name">
+    
+        <input type="submit" value="Add Resource Type" class="btn btn-info ml-3">
+    </form>
+    </div>
 <div class="type_container">
     <div class="list-group">
         {% for type in all_types %}
