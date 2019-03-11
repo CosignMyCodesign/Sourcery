@@ -9,5 +9,6 @@ urlpatterns = [
     path('login', views.login_user, name='login'),
     path('logout', views.user_logout, name='logout'),
     path('register', views.register, name='register'),
-    path('resources/<int:resource_type_id>/<int:user_id>/', views.resourceGrid, name='resourceGrid')
+    path('resources/<int:resource_type_id>/<int:user_id>/', views.resourceGrid, name='resourceGrid'),
+    path('addResourceType', views.addResourceType, name='addResourceType'),
 ]

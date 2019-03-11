@@ -2,6 +2,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from sourcery.models import Resource_Type
+from sourcery.forms import Resource_Type_Form
 
 from django.contrib.auth.decorators import login_required
 
@@ -14,17 +15,15 @@ def resourceTypeList(request):
     return render(request, 'sourcery/resourceTypeList.html', context)
 
 
-# def resourceTypeForm(request):
-#     '''
-#     [Renders the add new resource_type form template]
-#     '''
-#     return render(request, 'workforce/addDepartment.html')
-
 def addResourceType(request):
+    
+    if request.method == "POST":
+        user = request.user
+        name = request.POST["resource_type_name"]
 
-    resource_type_name = request.POST["resource_type_name"]
-
-    new_department = Department.objects.create(
-        name = resource_type_name
+    new_resource_type = Resource_Type.objects.create(
+        name = name,
+        user = user
     )
+
     return HttpResponseRedirect(reverse('sourcery:index'))

@@ -1,7 +1,7 @@
 {% block nav %}
 
 <nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand" href="">Sourcery</a>
+  <a class="navbar-brand" href="{% url 'sourcery:index' %}">Sourcery</a>
   <ul class="nav">
 {% if user.is_authenticated %}
     <li class="nav-item">
