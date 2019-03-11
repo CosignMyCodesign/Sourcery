@@ -4,6 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.shortcuts import render
 from django.template import RequestContext
 from sourcery.models import Resource_Type
+from sourcery.forms import Resource_Type_Form
 
 from sourcery.forms import UserForm
 # from sourcery.models import Product
@@ -14,7 +15,6 @@ def index(request):
     all_types = Resource_Type.objects.filter(user_id=current_user.id)
     context = {'all_types': all_types}
     return render(request, template_name, context)
-
 
 # Create your views here.
 def register(request):
@@ -93,7 +93,6 @@ def user_logout(request):
     # Take the user back to the homepage. Is there a way to not hard code
     # in the URL in redirects?????
     return HttpResponseRedirect('/')
-
 
 # def sell_product(request):
 #     if request.method == 'GET':
