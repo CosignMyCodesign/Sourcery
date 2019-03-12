@@ -28,6 +28,7 @@ def addResource(request):
     title = request.POST["resource_title"]
     url = request.POST["resource_url"]
     image = request.POST["resource_image"]
+    note = request.POST["resource_note"]
     resource_type_id = request.POST["type"]
     print("**************", resource_type_id)
     resource_type_instance = Resource_Type.objects.get(id=resource_type_id)
@@ -37,6 +38,7 @@ def addResource(request):
         user = user,
         url = url,
         image = image,
+        note = note,
         isCompleted = 0,
         resource_type = resource_type_instance
 
