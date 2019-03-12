@@ -11,7 +11,6 @@ def resourceGrid(request, user_id, resource_type_id):
     all_types = Resource_Type.objects.filter(user_id=current_user.id)
     all_resources = Resource.objects.filter(resource_type_id=resource_type_id)
     context = { 'all_resources' : all_resources , 'all_types' : all_types }
-    print("CONTEEEEEEXXT", context)
     return render(request, 'sourcery/resourceGrid.html', context)
 
 def resourceForm(request):
@@ -23,14 +22,14 @@ def resourceForm(request):
     return render(request, 'sourcery/addResource.html', {'all_types':all_types})
 
 def addResource(request):
-    print("hello")
+
     user = request.user
     title = request.POST["resource_title"]
     url = request.POST["resource_url"]
     image = request.POST["resource_image"]
     note = request.POST["resource_note"]
     resource_type_id = request.POST["type"]
-    print("**************", resource_type_id)
+   
     resource_type_instance = Resource_Type.objects.get(id=resource_type_id)
 
     new_resource = Resource.objects.create(
@@ -46,17 +45,25 @@ def addResource(request):
 
     return HttpResponseRedirect(reverse('sourcery:index'))
 
-    #  if request.method == 'GET':
-    #     payment_form = AddPaymentForm()
-    #     template_name = 'profile/add_payment.html'
-    #     return render(request, template_name, {'payment_form': payment_form})
 
-    
-    # if request.method == "POST":
-    #     customer = request.user.id
-    #     name = request.POST["name"]
-    #     accountNumber = request.POST["accountNumber"]
+def editResourceForm(request, resource_id):
+    current_user = request.user
+    all_types = Resource_Type.objects.filter(user_id=current_user.id)
 
-    # with connection.cursor() as cursor:
-    #     cursor.execute("INSERT into website_paymenttype VALUES(%s, %s, %s, %s, %s)", [None, name, accountNumber, None, customer])
-    #     return HttpResponseRedirect(reverse('website:profile'))
+    resource = get_object_or_404(Resource, pk=resource_id)
+
+    context = {'resource': resource, 'all_types': all_types}
+    return render(request, 'sourcery/editResource.html', context)
+
+def editResource( request, resource_id, resource_type_id):
+    current_user = request.user
+    all_types = Resource_Type.objects.filter(user_id=current_user.id)
+    resource = Resource.objects.get(id=resource_id)
+
+    resource.title = request.POST['resource_title']
+    resource.url = request.POST['resource_url']
+    resource.image = request.POST['resource_image']
+    resource.note = request.POST['resource_note']
+
+    resource.save()
+    return HttpResponseRedirect(reverse('sourcery:resourceGrid', args=(resource.resource_type_id, current_user.id,)))
