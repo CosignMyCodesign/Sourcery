@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% block content %}
+    <h1>Add Resource</h1>
+
+    <form action="{% url 'sourcery:addResource' %}" method="post">
+            {% csrf_token %}
+            <label for="adding_resource">Resource</label>
+            Title:
+            <input type="text" name="resource_title" id="adding_resource">
+            URL:
+            <input type="text" name="resource_url" id="adding_resource">
+            Image Link:
+            <input type="text" name="resource_image" id="adding_resource">
+            <select name= type>
+                <option disabled selected>select a resource type</option>
+                {% for type in all_types %}
+                    <option value="{{type.id}}">{{type.name}}</option>
+                    {% endfor %}
+            </select>
+            <input type="submit" value="Add Resource" />
+        </form>   
+  {% endblock %}
