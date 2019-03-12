@@ -2,6 +2,7 @@
 {% load staticfiles %}
 {% block content %}
 <div class="resource_container">
+    <a href="{% url 'sourcery:resourceForm' %}"><button type="button" class="btn btn-success mt-3">Add Resource</button></a>
     {% if all_resources %}
         <div class="row">
         {% for resource in all_resources %}
@@ -23,7 +24,6 @@
     {% else %}
         <p>No Resources Available.</p>
     {% endif %}
-    <a href=""><button type="button" class="btn btn-info mt-3">Create New Resource</button></a>
 
 </div>
 {% endblock content %}
