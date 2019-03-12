@@ -13,3 +13,21 @@ def resourceGrid(request, user_id, resource_type_id):
     context = { 'all_resources' : all_resources , 'all_types' : all_types }
     print("CONTEEEEEEXXT", context)
     return render(request, 'sourcery/resourceGrid.html', context)
+
+def addResource(request):
+    
+    if request.method == "POST":
+        user = request.user
+        title = request.POST["resource_title"]
+        url = request.POST["resource_url"]
+        image = request.POST["resource_image"]
+        # title = request.POST["resource_type_name"]
+
+    new_resource = Resource.objects.create(
+        title = title,
+        user = user,
+        url = url,
+        image = image,
+    )
+
+    return HttpResponseRedirect(reverse('sourcery:index'))
