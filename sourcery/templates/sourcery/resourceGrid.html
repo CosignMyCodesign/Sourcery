@@ -15,7 +15,7 @@
                     <div class="card-btn-group">
                     <a class="card-link" href="{{resource.url}}"><button type="button" class="btn btn-outline-info mt-3">Go here</button></a>
                     <a class="card-link" href="{% url 'sourcery:editResourceForm' resource.id %}"><button type="button" class="btn btn-outline-primary mt-3">Edit</button></a>
-                    <a class="card-link" href=""><button type="button" class="btn btn-outline-danger mt-3">Delete</button></a>
+                    <a class="card-link" href="{% url 'sourcery:deleteResource' resource.id %}"><button type="button" class="btn btn-outline-danger mt-3">Delete</button></a>
                     </div>
 
                 </div>

@@ -15,4 +15,5 @@ urlpatterns = [
     path('resourceForm', views.resourceForm, name='resourceForm'),
     path('editResource/<int:resource_id>', views.editResource, name='editResource'),
     path('editResourceForm/<int:resource_id>', views.editResourceForm, name='editResourceForm'),
+    path('deleteResource/<int:resource_id>', views.deleteResource, name='deleteResource'),
 ]
