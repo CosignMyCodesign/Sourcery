@@ -2,9 +2,14 @@
 {% load staticfiles %}
 {% block content %}
 <div class="resource_container">
-    <a href="{% url 'sourcery:resourceForm' %}"><button type="button" class="btn btn-success mt-3">Add Resource</button></a>
+    
+    
+    <div class="add_resource_button">
+        <a href="{% url 'sourcery:resourceForm' %}"><button type="button" class="btn btn-success mt-3">Add A New Resource</button></a>
+    </div>
     {% if all_resources %}
-        <div class="row">
+    
+    <div class="row source_container">
         {% for resource in all_resources %}
         <div class="col-sm">
             <div class="card bg-dark text-white">

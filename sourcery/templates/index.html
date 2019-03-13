@@ -21,16 +21,16 @@
         {% block nav %}
         {% include "sourcery/navbar.html" %}
         {% endblock nav %}
-        <form action="{% url 'sourcery:addResourceType' %}" method="post">
-            {% csrf_token %}
-            <label for="type_name">Resource Type</label>
-            <input type="text" name="resource_type_name" id="type_name">
-            <input type="submit" value="Add Resource Type" />
-        </form>   
-    <h1  class="display-4 center">Welcome to Sourcery!</h1>
-    {% if user.is_authenticated %}
-  </br>
-    <h3 class="lead"> Greetings {{ user.username }}. Let's make the magic happen!</h3>
+        <h1 class="display-4 center">Welcome to Sourcery!</h1>
+        {% if user.is_authenticated %}
+    </br>
+    <h3 class="lead mb-5"> Greetings {{ user.username }}. Let's make the magic happen!</h3>
+    <form action="{% url 'sourcery:addResourceType' %}" method="post">
+        {% csrf_token %}
+        <label for="type_name"></label>
+        <input type="text" name="resource_type_name" id="type_name">
+        <input type="submit" value="Add Resource Type" />
+    </form>   
     <div class="index_container">
     {%block types%}
     {% include "sourcery/resourceTypeList.html" %}
