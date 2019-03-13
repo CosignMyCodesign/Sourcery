@@ -67,3 +67,10 @@ def editResource( request, resource_id):
 
     resource.save()
     return HttpResponseRedirect(reverse('sourcery:resourceGrid', args=(resource.resource_type.id, current_user.id,)))
+
+def deleteResource(request, resource_id):
+    current_user = request.user
+    resource = get_object_or_404(Resource, pk=resource_id)
+
+    resource.delete()
+    return HttpResponseRedirect(reverse('sourcery:resourceGrid', args=(resource.resource_type.id, current_user.id,)))
