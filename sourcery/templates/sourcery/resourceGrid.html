@@ -12,8 +12,10 @@
                     <h5 class="card-title mb-4 text-center">{{ resource.title }}</h5>
                     <h6>URL: {{resource.url}}</h6>
                     <h6>Note: {{resource.note}}</h6>
-                    <div class="card-btn">
-                    <a class="card-link" href=""><button type="button" class="btn btn-outline-info mt-3">Go here</button></a>
+                    <div class="card-btn-group">
+                    <a class="card-link" href="{{resource.url}}"><button type="button" class="btn btn-outline-info mt-3">Go here</button></a>
+                    <a class="card-link" href="{% url 'sourcery:editResourceForm' resource.id %}"><button type="button" class="btn btn-outline-primary mt-3">Edit</button></a>
+                    <a class="card-link" href=""><button type="button" class="btn btn-outline-danger mt-3">Delete</button></a>
                     </div>
 
                 </div>

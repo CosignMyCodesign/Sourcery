@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% block content %}
+<div class="container">
+
+<form action="{% url 'sourcery:editResource' resource.id %}" method="post">
+{% csrf_token %}
+<label class="mr-3 mt-2">Resource Title</label><input type="text" name="resource_title" value="{{ resource.title }}"/><br><br>
+<label class="mr-3">Resource URL</label><input type="text" name="resource_url" value="{{ resource.url }}" /><br><br>
+<label class="mr-3">Resource Image</label><input type="text" name="resource_image" value="{{ resource.image }}" /><br><br>
+<label class="mr-3">Resource Note</label><input type="text" name="resource_note" value="{{ resource.note }}"/><br><br>
+<input type="submit" value="Edit Program" class="btn btn-info mt-2 d-inline"/>
+<a href="{% url 'sourcery:resourceGrid' resource.resource_type.id user.id %}"><button class="btn btn-secondary d-inline mt-2">Go Back</button></a>
+</form>
+
+</div>
+{% endblock content %}
