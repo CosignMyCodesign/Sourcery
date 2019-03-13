@@ -55,7 +55,7 @@ def editResourceForm(request, resource_id):
     context = {'resource': resource, 'all_types': all_types}
     return render(request, 'sourcery/editResource.html', context)
 
-def editResource( request, resource_id, resource_type_id):
+def editResource( request, resource_id):
     current_user = request.user
     all_types = Resource_Type.objects.filter(user_id=current_user.id)
     resource = Resource.objects.get(id=resource_id)
@@ -66,4 +66,4 @@ def editResource( request, resource_id, resource_type_id):
     resource.note = request.POST['resource_note']
 
     resource.save()
-    return HttpResponseRedirect(reverse('sourcery:resourceGrid', args=(resource.resource_type_id, current_user.id,)))
+    return HttpResponseRedirect(reverse('sourcery:resourceGrid', args=(resource.resource_type.id, current_user.id,)))
