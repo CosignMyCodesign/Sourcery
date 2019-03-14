@@ -7,13 +7,13 @@
     
     <div class="row source_container">
             
-            <div class="col-sm">
-                <a href="{% url 'sourcery:resourceForm' %}"><button type="button" class="btn btn-success add_resource_btn"> <i class="fas fa-plus"></i></button></a>
-            </div>
+        <div class="col-sm">
+            <a href="{% url 'sourcery:resourceForm' %}"><button type="button" class="btn btn-success add_resource_btn"> <i class="fas fa-plus"></i></button></a>
+        </div>
         {% for resource in all_resources %}
         <div class="col-sm">
             <div class="card bg-dark text-white">
-                    <img class=“card-img-top” src={{resource.image}} alt=“card_image”>
+                    <img class=“card-img-top” src={{resource.image}} onError="this.onerror=null;this.src='{% static 'sourcery/images/witch-hat-blue.png' %}';" alt=card_image>
                 <div class="card-body">
                     <h5 class="card-title mb-4 text-center">{{ resource.title }}</h5>
                     <h6>URL: {{resource.url}}</h6>

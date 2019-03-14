@@ -144,10 +144,13 @@ a:hover {
 		left:-3px;
 	}
 }
-
+/* Image header in the cards */
 img {
     height: 150px;
     width: 100%;
 }
-
+/* 
+h1 {
+    background-color: grey;
+} */
 
