@@ -149,7 +149,7 @@ a:hover {
 	}
 }
 /* Image header in the cards */
-img {
+.card-img-top {
     height: 150px;
     width: 100%;
 }
@@ -158,3 +158,35 @@ h1 {
     background-color: grey;
 } */
 
+.main_header{
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: xx-large;
+}
+
+.greeting_header{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main_logo{
+    width: 100px !important;
+    height: auto;
+    padding-top: 20px;
+}
+
+.navbar {
+    display:flex;
+    align-items: flex-end;
+}
+
+.logo_navlink_div{
+    display:flex;
+    justify-content: space-between;
+}
+
+.nav_link_div{
+    align-self: flex-end;
+}
+
+.header_div{
+    display:flex;
+}

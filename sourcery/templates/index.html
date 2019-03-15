@@ -12,6 +12,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
             crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700|Open+Sans" rel="stylesheet">
     
     <link rel="stylesheet" type="text/css" href="{% static 'sourcery/index.css' %}">
     <title>Sourcery</title>
@@ -21,10 +24,10 @@
         {% block nav %}
         {% include "sourcery/navbar.html" %}
         {% endblock nav %}
-        <h1 class="display-4 text-center">Welcome to Sourcery!</h1>
+
         {% if user.is_authenticated %}
     </br>
-    <h3 class="lead mb-5 text-center"> Greetings {{ user.username }}. Let's make the magic happen!</h3>
+    <h2 class="lead mb-5 text-center greeting_header"> Greetings {{ user.username }}. Let's make the magic happen!</h2>
     <form action="{% url 'sourcery:addResourceType' %}" method="post">
         {% csrf_token %}
         <label for="type_name"></label>
