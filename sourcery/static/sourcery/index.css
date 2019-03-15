@@ -1,3 +1,14 @@
+* {
+    font-size: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main_header{
+    font-family: 'Cinzel Decorative', cursive !important;
+    font-size: xx-large;
+}
+
+
 .jumbotron_container {
     display: flex;
     min-height: 100vh;
@@ -71,7 +82,7 @@ a:hover {
 .resource_container {
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: 78%;
     margin-top: 5px;
 }
 /* Resource Card Container */
@@ -158,14 +169,6 @@ h1 {
     background-color: grey;
 } */
 
-.main_header{
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: xx-large;
-}
-
-.greeting_header{
-    font-family: 'Open Sans', sans-serif;
-}
 
 .main_logo{
     width: 100px !important;
@@ -176,6 +179,7 @@ h1 {
 .navbar {
     display:flex;
     align-items: flex-end;
+    width: auto;
 }
 
 .logo_navlink_div{
@@ -189,4 +193,14 @@ h1 {
 
 .header_div{
     display:flex;
+}
+
+/* Navbar Icon */
+.fa-calendar-alt{
+    color: rgb(79, 30, 255);
+    padding-right: 2px;
+}
+
+.fa-folder{
+    margin-right: 5px;
 }
