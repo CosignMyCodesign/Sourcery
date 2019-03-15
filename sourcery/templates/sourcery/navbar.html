@@ -1,25 +1,35 @@
+{% load staticfiles %}
 {% block nav %}
 
 <nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand" href="{% url 'sourcery:index' %}">Sourcery</a>
-  <ul class="nav">
-{% if user.is_authenticated %}
-    <li class="nav-item">
-    <a class="nav-link link" href="{% url 'sourcery:logout' %}"
-        ><i class="far fa-calendar-alt"></i>Logout</a>
-    </li>
-    {% else %}
-    <li class="nav-item">
-      <a class="nav-link link" href="{% url 'sourcery:login' %}"
-        ><i class="far fa-user-circle"></i>Login</a
-      >
-    </li>
-    <li class="nav-item">
-      <a class="nav-link link" href="{% url 'sourcery:register' %}"
-        ><i class="far fa-building"></i>Register</a>
-    </li>
-    {% endif %}
-</ul>   
+    <div class="header_div">
+        <div class="logo_div">
+            <img class="main_logo" src='{% static 'sourcery/images/main_logo-flipped_zeke.jpg' %}' alt=logo_image>
+        </div>
+        <a class="navbar-brand main_header ml-2" href="{% url 'sourcery:index' %}">Sourcery</a>
+    </div>
+    <div class="logo_navlink_div">
+        <div class="nav_link_div">
+            <ul class="nav">
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                <a class="nav-link link" href="{% url 'sourcery:logout' %}"
+                    ><i class="far fa-calendar-alt"></i>Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                <a class="nav-link link" href="{% url 'sourcery:login' %}"
+                    ><i class="far fa-user-circle"></i>Login</a
+                >
+                </li>
+                <li class="nav-item">
+                <a class="nav-link link" href="{% url 'sourcery:register' %}"
+                    ><i class="far fa-building"></i>Register</a>
+                </li>
+                {% endif %}
+            </ul>   
+        </div>
+    </div>
 </nav>
 
 {% endblock %}

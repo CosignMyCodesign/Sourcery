@@ -2,12 +2,18 @@
 {% load staticfiles %}
 {% block content %}
 <div class="resource_container">
-    <a href="{% url 'sourcery:resourceForm' %}"><button type="button" class="btn btn-success mt-3">Add Resource</button></a>
+    
     {% if all_resources %}
-        <div class="row">
+    
+    <div class="row source_container">
+            
+        <div class="col-sm">
+            <a href="{% url 'sourcery:resourceForm' %}"><button type="button" class="btn btn-success add_resource_btn"><h5 class="add_resource_header">Add a New Resource</h5> <i class="fas fa-plus"></i></button></a>
+        </div>
         {% for resource in all_resources %}
         <div class="col-sm">
-            <div class="card bg-dark text-white">
+            <div class="card bg-dark text-white resource_card">
+                    <img class="card-img-top" src={{resource.image}} onError="this.onerror=null;this.src='{% static 'sourcery/images/witch-hat-blue.png' %}';" alt=card_image>
                 <div class="card-body">
                     <h5 class="card-title mb-4 text-center">{{ resource.title }}</h5>
                     <h6>URL: {{resource.url}}</h6>
