@@ -8,6 +8,13 @@
     font-size: xx-large;
 }
 
+.greeting_header{
+    font-family: 'Cinzel Decorative', cursive !important;
+}
+
+body {
+    background: url(images/background2.png);
+  }
 
 .jumbotron_container {
     display: flex;
@@ -203,4 +210,9 @@ h1 {
 
 .fa-folder{
     margin-right: 5px;
+}
+
+.spellbook_icon{
+    height: 20px;
+    width: 20px;
 }

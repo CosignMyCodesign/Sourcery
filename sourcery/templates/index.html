@@ -27,7 +27,7 @@
 
         {% if user.is_authenticated %}
     </br>
-    <h2 class="lead mb-5 text-center greeting_header"> Greetings {{ user.username }}. Let's make the magic happen!</h2>
+    <h2 class="lead mb-5 mt-5 text-center greeting_header"> Greetings, {{ user.username }}. Let's make the magic happen!</h2>
     <form action="{% url 'sourcery:addResourceType' %}" method="post">
         {% csrf_token %}
         <label for="type_name"></label>
