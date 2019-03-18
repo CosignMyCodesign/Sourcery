@@ -31,7 +31,8 @@ body {
 
 
 .link {
-    color: rgba(214, 199, 196, 0.788)
+    color: whitesmoke;
+    font-weight: bold;
 }
 
 .link:hover {
@@ -168,7 +169,7 @@ a:hover {
 }
 /* Image header in the cards */
 .card-img-top {
-    height: 150px;
+    height: 200px;
     width: 100%;
 }
 /* 
@@ -176,11 +177,21 @@ h1 {
     background-color: grey;
 } */
 
-
+/* Navbar logo */
 .main_logo{
-    width: 100px !important;
-    height: auto;
-    padding-top: 20px;
+    width: 120px !important;
+    height: 120px;
+    padding-top: 10px;
+}
+/* Spellbook Logo */
+.spellbook_logo{
+    width: 50px;
+    height: 50px;
+}
+/* Spellbook Header */
+.spellbook_header{
+    background-color: #343a40;
+    color: white;
 }
 
 .navbar {
@@ -202,14 +213,10 @@ h1 {
     display:flex;
 }
 
-/* Navbar Icon */
-.fa-calendar-alt{
-    color: rgb(79, 30, 255);
-    padding-right: 2px;
-}
-
-.fa-folder{
-    margin-right: 5px;
+/* Navbar Icons (Login, Register, Logout) */
+.navicon{
+    color: #dd3737;
+    padding-right: 3px; 
 }
 
 .spellbook_icon{

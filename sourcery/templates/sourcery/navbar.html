@@ -4,9 +4,9 @@
 <nav class="navbar navbar-dark bg-dark">
     <div class="header_div">
         <div class="logo_div">
-            <img class="main_logo" src='{% static 'sourcery/images/main_logo-flipped_zeke.jpg' %}' alt=logo_image>
+            <img class="main_logo" src='{% static 'sourcery/images/Dillons_Wizards-04.png' %}' alt=logo_image>
         </div>
-        <a class="navbar-brand main_header ml-2" href="{% url 'sourcery:index' %}">Sourcery</a>
+        <a class="navbar-brand main_header" href="{% url 'sourcery:index' %}">Sourcery</a>
     </div>
     <div class="logo_navlink_div">
         <div class="nav_link_div">
@@ -14,17 +14,17 @@
                 {% if user.is_authenticated %}
                 <li class="nav-item">
                 <a class="nav-link link" href="{% url 'sourcery:logout' %}"
-                    ><i class="far fa-calendar-alt"></i>Logout</a>
+                    ><i class="fas fa-sign-out-alt navicon"></i>Logout</a>
                 </li>
                 {% else %}
                 <li class="nav-item">
                 <a class="nav-link link" href="{% url 'sourcery:login' %}"
-                    ><i class="far fa-user-circle"></i>Login</a
+                    ><i class="far fa-user-circle navicon"></i>Login</a
                 >
                 </li>
                 <li class="nav-item">
                 <a class="nav-link link" href="{% url 'sourcery:register' %}"
-                    ><i class="far fa-building"></i>Register</a>
+                    ><i class="fas fa-user-plus navicon"></i>Register</a>
                 </li>
                 {% endif %}
             </ul>   
