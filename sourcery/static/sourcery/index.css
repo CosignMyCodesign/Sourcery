@@ -100,22 +100,30 @@ a:hover {
     /* column-gap: 0rem; */
 }
 
+.firstresource_container{
+    width: 78%;
+}
+.addfirst_container{
+    margin-top: 50px;
+    height: 300px;
+}
+
 /* Add Resource button with animation effects below */
-.add_resource_button {
-    width: 100%;
-    display:flex;
+
+.add_firstresource_btn {
+    height: 90%;
+    width: auto;
+	position: relative;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.3s ease;
+    background-color: #0caf2f;
 }
 
 .add_resource_btn {
     margin: 20px 9px 5px 3px !important;
     height: 70%;
     width: 100%;
-    /* font-size: 1.5rem; */
-		/* color: white; */
 	position: relative;
-	/* border-radius: 50%; */
-	/* padding: 5px;
-	margin: 3px; */
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: color 0.2s ease, background-color 0.2s ease, transform 0.3s ease;
     background-color: #0caf2f;
@@ -172,10 +180,6 @@ a:hover {
     height: 200px;
     width: 100%;
 }
-/* 
-h1 {
-    background-color: grey;
-} */
 
 /* Navbar logo */
 .main_logo{
@@ -184,15 +188,6 @@ h1 {
     padding-top: 10px;
 }
 /* Spellbook Logo */
-.spellbook_logo{
-    width: 50px;
-    height: 50px;
-}
-/* Spellbook Header */
-.spellbook_header{
-    background-color: #343a40;
-    color: white;
-}
 
 .navbar {
     display:flex;
@@ -219,7 +214,30 @@ h1 {
     padding-right: 3px; 
 }
 
+/* ***Spellbook/ Resource Types*** */
+.spellbook_logo{
+    width: 50px;
+    height: 50px;
+}
+
+/* Spellbook Header */
+.spellbook_header{
+    background-color: #343a40;
+    color: white;
+}
+.add_spellbook{
+    background-color: #0caf2f;
+    color: white;
+}
+
 .spellbook_icon{
     height: 20px;
     width: 20px;
+}
+/* ***End Spellbook/Resource Types*** */
+
+/* Add first resource (when none have been added to a spellbook */
+ 
+.add_first_header{
+    height:20px;
 }
