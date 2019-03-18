@@ -6,7 +6,7 @@
 <div class="resource_container">
     
     
-    <div class="row source_container">
+    <div class="row container">
             
         <div class="col-sm">
             <a href="{% url 'sourcery:resourceForm' %}"><button type="button" class="btn btn-success add_resource_btn"><h5 class="add_resource_header">Add a New Resource</h5> <i class="fas fa-plus"></i></button></a>
@@ -17,8 +17,7 @@
                     <img class="card-img-top" src={{resource.image}} onError="this.onerror=null;this.src='{% static 'sourcery/images/Dillons_Wizards-05.png' %}';" alt=card_image>
                 <div class="card-body">
                     <h5 class="card-title mb-4 text-center">{{ resource.title }}</h5>
-                    <h6>URL: {{resource.url}}</h6>
-                    <h6>Note: {{resource.note}}</h6>
+                    <p class="m-0 note_text">Note: {{resource.note}}</p>
                     <div class="card-btn-group">
                     <a class="card-link" href="{{resource.url}}"><button type="button" class="btn btn-outline-info mt-3">Go here</button></a>
                     <a class="card-link" href="{% url 'sourcery:editResourceForm' resource.id %}"><button type="button" class="btn btn-outline-primary mt-3">Edit</button></a>

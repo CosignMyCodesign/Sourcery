@@ -3,6 +3,10 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+html {
+    height:100vh;
+}
+
 .main_header{
     font-family: 'Cinzel Decorative', cursive !important;
     font-size: xx-large;
@@ -14,6 +18,9 @@
 
 body {
     background: url(images/background2.png);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
   }
 
 .jumbotron_container {
@@ -120,7 +127,7 @@ a:hover {
 }
 
 .add_resource_btn {
-    margin: 20px 9px 5px 3px !important;
+
     height: 70%;
     width: 100%;
 	position: relative;
@@ -155,7 +162,7 @@ a:hover {
     box-shadow: 10px 0 20px rgba(0, 0, 0, 0.19), 6px 0 6px rgba(0, 0, 0, 0.23);
 }
 
-@media (min-width:601px) {
+/* @media (min-width:601px) {
 	.add_resource_btn {
 		padding:10px;
 		margin:5px;
@@ -174,18 +181,17 @@ a:hover {
 		top:-3px;
 		left:-3px;
 	}
-}
+} */
 /* Image header in the cards */
 .card-img-top {
-    height: 200px;
+    height: 180px;
     width: 100%;
 }
 
 /* Navbar logo */
 .main_logo{
-    width: 120px !important;
-    height: 120px;
-    padding-top: 10px;
+    width: 80px;
+    height: 80px;
 }
 /* Spellbook Logo */
 
@@ -240,4 +246,17 @@ a:hover {
  
 .add_first_header{
     height:20px;
+}
+
+.footer {
+    margin-top: 60px;
+    height: 100%;
+}
+
+.content {
+    flex: 1;
+}
+
+.note_text{
+    font-size: 14px;
 }

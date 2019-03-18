@@ -21,10 +21,11 @@
   </head>
   
   <body>
-        {% block nav %}
-        {% include "sourcery/navbar.html" %}
-        {% endblock nav %}
-
+      {% block nav %}
+      {% include "sourcery/navbar.html" %}
+      {% endblock nav %}
+      
+      <div class="content">
         {% if user.is_authenticated %}
     </br>
     <h2 class="mb-5 mt-5 text-center greeting_header"> Greetings, {{ user.username }}. Let's make the magic happen!</h2>
@@ -50,5 +51,16 @@
 
     <h4 class="text-center font-weight-bold mt-5">Please login or register above</h4>
     {% endif %}
-  </body>
+
+
+</div>
+    <footer class="footer bg-dark">
+            <p>Posted by: Hege Refsnes</p>
+            <p>Contact information: <a href="mailto:someone@example.com">
+            someone@example.com</a>.</p>
+    </footer>
+
+</body>
+
+      
 </html>
