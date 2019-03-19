@@ -261,7 +261,11 @@ a:hover {
 
 .footer {
     margin-top: 5px;
-    height: 100%;
+    height: 100px;
+}
+
+.footer_text{
+    color: white;
 }
 
 .content {

@@ -22,9 +22,9 @@
                     <div>
                         <p class="mt-1 card-text font-italic">{{resource.note}}</p>
                         <div class="card-btn-group">
-                            <a class="card-link" href="{{resource.url}}"><button type="button" class="btn btn-outline-info mt-3">Teleport</button></a>
-                            <a class="card-link" href="{% url 'sourcery:editResourceForm' resource.id %}"><button type="button" class="btn btn-outline-primary mt-3">Edit</button></a>
-                            <a class="card-link" href="{% url 'sourcery:deleteResource' resource.id %}"><button type="button" class="btn btn-outline-danger mt-3">Delete</button><a>
+                            <a class="card-link" href="{{resource.url}}"><button type="button" class="btn btn-outline-info mt-3 btn-sm">Teleport</button></a>
+                            <a class="card-link" href="{% url 'sourcery:editResourceForm' resource.id %}"><button type="button" class="btn btn-outline-primary mt-3 btn-sm">Transform</button></a>
+                            <a class="card-link" href="{% url 'sourcery:deleteResource' resource.id %}"><button type="button" class="btn btn-outline-danger mt-3 btn-sm">Vanish</button><a>
                         </div>
                     </div>
                 </div>
