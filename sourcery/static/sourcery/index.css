@@ -89,6 +89,8 @@ a:hover {
 /* Resource Cards */
 .resource_card {
     box-shadow: 10px 0 20px rgba(0, 0, 0, 0.25), 6px 0 6px rgba(0, 0, 0, 0.445);
+    width: 100%;
+    max-width: 300px;
 }
 /* Parent Resource Card/button container */
 .resource_container {
@@ -126,6 +128,8 @@ a:hover {
 .add_resource_btn {
 
     height: 70%;
+    max-height: 400px;
+    max-width: 300px;
     width: 100%;
 	position: relative;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -276,12 +280,12 @@ a:hover {
     color: white;
     font-size: 1.3vw;
     color: #efc445;
-    font-family: 'Cinzel Decorative', cursive !important;
+    margin-left: -230px;
 }
 
 .add_logo{
-    max-height: 80% !important;
-    max-width: 80% !important;
+    max-height: 300px !important;
+    max-width: 250px !important;
 }
 
 .add_resource_form{

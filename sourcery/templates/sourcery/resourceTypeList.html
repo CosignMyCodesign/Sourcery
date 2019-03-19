@@ -4,9 +4,13 @@
 <div class="type_container ml-3">
     <div class="list-group">
         <li class="list-group-item list-group-item font-weight-bold text-center spellbook_header"><img class="spellbook_logo" src='{% static 'sourcery/images/Dillons_Wizards-01.png' %}' alt=logo_image>Spellbooks</li>
-        {% for type in all_types %}
-        <a href="{% url 'sourcery:resourceGrid' type.id user.id %}" class="list-group-item list-group-item-action font-weight-bold"><img class="spellbook_icon mr-2" src='{% static 'sourcery/images/spellbook.png' %}' alt=spellbook_icon>{{ type.name }}</a>
-        {% endfor %}
+        {% if all_types %}
+            {% for type in all_types %}
+            <a href="{% url 'sourcery:resourceGrid' type.id user.id %}" class="list-group-item list-group-item-action font-weight-bold"><img class="spellbook_icon mr-2" src='{% static 'sourcery/images/spellbook.png' %}' alt=spellbook_icon>{{ type.name }}</a>
+            {% endfor %}
+        {% else %}
+        <li class="list-group-item font-weight-bold">0 Spellbooks Added</li>
+        {% endif %}
     </div>
 </div>
 {% endblock types %}

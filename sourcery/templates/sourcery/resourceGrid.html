@@ -7,12 +7,12 @@
     
     
     <div class="row container">
-            
         <div class="col-sm">
             <div>
             <a href="{% url 'sourcery:resourceForm' %}"><button type="button" class="btn add_resource_btn"><p class="add_resource_header">Conjure a New Resource</p><img class="add_logo" src='{% static 'sourcery/images/Dillons_Wizards-02.png' %}' alt=logo_image></button></a>
             </div>
         </div>
+
         {% for resource in all_resources %}
         <div class="col-sm">
             <div class="card bg-dark text-white resource_card">
