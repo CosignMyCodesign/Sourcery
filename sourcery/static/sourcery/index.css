@@ -9,7 +9,7 @@ html {
 
 .main_header{
     font-family: 'Cinzel Decorative', cursive !important;
-    font-size: xx-large;
+    font-size: 34px;
 }
 
 body {
@@ -87,7 +87,7 @@ a:hover {
 
 /* Resource Cards */
 .resource_card {
-    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.25), 6px 0 6px rgba(0, 0, 0, 0.29);
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.25), 6px 0 6px rgba(0, 0, 0, 0.445);
 }
 /* Parent Resource Card/button container */
 .resource_container {
@@ -129,7 +129,9 @@ a:hover {
 	position: relative;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: color 0.2s ease, background-color 0.2s ease, transform 0.3s ease;
-    background-color: #0caf2f;
+    background-color: #63d471;
+    background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+    color: white;
 
 }
 
@@ -137,7 +139,7 @@ a:hover {
     /* background-color: transparent; */
     /* transform: rotate(90deg); */
     cursor: pointer;
-    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.19), 6px 0 6px rgba(0, 0, 0, 0.23);;
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.19), 6px 0 6px rgba(0, 0, 0, 0.541);
 }
 
 .add_resource_btn:after {
@@ -156,6 +158,11 @@ a:hover {
 .add_resource_btn:hover:after {
     transform: scale(1);
     box-shadow: 10px 0 20px rgba(0, 0, 0, 0.19), 6px 0 6px rgba(0, 0, 0, 0.23);
+}
+
+.add_resource_header{
+    font-family: 'Cinzel Decorative', cursive !important;
+    font-size: 16px;
 }
 
 /* @media (min-width:601px) {
@@ -204,6 +211,7 @@ a:hover {
 
 .nav_link_div{
     align-self: flex-end;
+    padding-right: 30px;
 }
 
 .header_div{
@@ -226,9 +234,10 @@ a:hover {
 .spellbook_header{
     background-color: #343a40;
     color: white;
+    font-family: 'Cinzel Decorative', cursive !important;
 }
 .add_spellbook{
-    background-color: #0caf2f;
+    background-color: #28a745;
     color: white;
 }
 
@@ -264,8 +273,13 @@ a:hover {
 .greeting_container h6 {
     align-self: flex-end;
     color: white;
-    font-size: 14px;
-    color: #ffc107;
+    font-size: 1.3vw;
+    color: #efc445;
     font-family: 'Cinzel Decorative', cursive !important;
+}
+
+.add_logo{
+    max-height: 80% !important;
+    max-width: 80% !important;
 }
 
