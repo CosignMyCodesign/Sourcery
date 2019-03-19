@@ -3,17 +3,20 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-.main_header{
-    font-family: 'Cinzel Decorative', cursive !important;
-    font-size: xx-large;
+html {
+    height:100vh;
 }
 
-.greeting_header{
+.main_header{
     font-family: 'Cinzel Decorative', cursive !important;
+    font-size: 34px;
 }
 
 body {
     background: url(images/background2.png);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
   }
 
 .jumbotron_container {
@@ -31,7 +34,8 @@ body {
 
 
 .link {
-    color: rgba(214, 199, 196, 0.788)
+    color: whitesmoke;
+    font-weight: bold;
 }
 
 .link:hover {
@@ -83,7 +87,7 @@ a:hover {
 
 /* Resource Cards */
 .resource_card {
-    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.25), 6px 0 6px rgba(0, 0, 0, 0.29);
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.25), 6px 0 6px rgba(0, 0, 0, 0.445);
 }
 /* Parent Resource Card/button container */
 .resource_container {
@@ -99,25 +103,35 @@ a:hover {
     /* column-gap: 0rem; */
 }
 
-/* Add Resource button with animation effects below */
-.add_resource_button {
-    width: 100%;
-    display:flex;
+.firstresource_container{
+    width: 78%;
+}
+.addfirst_container{
+    margin-top: 50px;
+    height: 300px;
 }
 
-.add_resource_btn {
-    margin: 20px 9px 5px 3px !important;
-    height: 70%;
-    width: 100%;
-    /* font-size: 1.5rem; */
-		/* color: white; */
+/* Add Resource button with animation effects below */
+
+.add_firstresource_btn {
+    height: 90%;
+    width: auto;
 	position: relative;
-	/* border-radius: 50%; */
-	/* padding: 5px;
-	margin: 3px; */
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: color 0.2s ease, background-color 0.2s ease, transform 0.3s ease;
     background-color: #0caf2f;
+}
+
+.add_resource_btn {
+
+    height: 70%;
+    width: 100%;
+	position: relative;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.3s ease;
+    background-color: #63d471;
+    background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+    color: white;
 
 }
 
@@ -125,7 +139,7 @@ a:hover {
     /* background-color: transparent; */
     /* transform: rotate(90deg); */
     cursor: pointer;
-    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.19), 6px 0 6px rgba(0, 0, 0, 0.23);;
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.19), 6px 0 6px rgba(0, 0, 0, 0.541);
 }
 
 .add_resource_btn:after {
@@ -146,7 +160,12 @@ a:hover {
     box-shadow: 10px 0 20px rgba(0, 0, 0, 0.19), 6px 0 6px rgba(0, 0, 0, 0.23);
 }
 
-@media (min-width:601px) {
+.add_resource_header{
+    font-family: 'Cinzel Decorative', cursive !important;
+    font-size: 16px;
+}
+
+/* @media (min-width:601px) {
 	.add_resource_btn {
 		padding:10px;
 		margin:5px;
@@ -165,23 +184,19 @@ a:hover {
 		top:-3px;
 		left:-3px;
 	}
-}
+} */
 /* Image header in the cards */
 .card-img-top {
-    height: 150px;
+    height: 180px;
     width: 100%;
 }
-/* 
-h1 {
-    background-color: grey;
-} */
 
-
+/* Navbar logo */
 .main_logo{
-    width: 100px !important;
-    height: auto;
-    padding-top: 20px;
+    width: 80px;
+    height: 80px;
 }
+/* Spellbook Logo */
 
 .navbar {
     display:flex;
@@ -196,23 +211,75 @@ h1 {
 
 .nav_link_div{
     align-self: flex-end;
+    padding-right: 30px;
 }
 
 .header_div{
     display:flex;
 }
 
-/* Navbar Icon */
-.fa-calendar-alt{
-    color: rgb(79, 30, 255);
-    padding-right: 2px;
+/* Navbar Icons (Login, Register, Logout) */
+.navicon{
+    color: #dd3737;
+    padding-right: 3px; 
 }
 
-.fa-folder{
-    margin-right: 5px;
+/* ***Spellbook/ Resource Types*** */
+.spellbook_logo{
+    width: 50px;
+    height: 50px;
+}
+
+/* Spellbook Header */
+.spellbook_header{
+    background-color: #343a40;
+    color: white;
+    font-family: 'Cinzel Decorative', cursive !important;
+}
+.add_spellbook{
+    background-color: #28a745;
+    color: white;
 }
 
 .spellbook_icon{
     height: 20px;
     width: 20px;
 }
+/* ***End Spellbook/Resource Types*** */
+
+/* Add first resource (when none have been added to a spellbook */
+ 
+.add_first_header{
+    height:20px;
+}
+
+.footer {
+    margin-top: 60px;
+    height: 100%;
+}
+
+.content {
+    flex: 1;
+}
+
+.note_text{
+    font-size: 14px;
+}
+
+.greeting_container {
+    display:flex;
+}
+
+.greeting_container h6 {
+    align-self: flex-end;
+    color: white;
+    font-size: 1.3vw;
+    color: #efc445;
+    font-family: 'Cinzel Decorative', cursive !important;
+}
+
+.add_logo{
+    max-height: 80% !important;
+    max-width: 80% !important;
+}
+

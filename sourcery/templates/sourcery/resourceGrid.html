@@ -1,37 +1,49 @@
 {% extends "index.html" %}
 {% load staticfiles %}
 {% block content %}
+
+{% if all_resources %}
 <div class="resource_container">
     
-    {% if all_resources %}
     
-    <div class="row source_container">
+    <div class="row container">
             
         <div class="col-sm">
-            <a href="{% url 'sourcery:resourceForm' %}"><button type="button" class="btn btn-success add_resource_btn"><h5 class="add_resource_header">Add a New Resource</h5> <i class="fas fa-plus"></i></button></a>
+            <div>
+            <a href="{% url 'sourcery:resourceForm' %}"><button type="button" class="btn add_resource_btn"><p class="add_resource_header">Conjure a New Resource</p><img class="add_logo" src='{% static 'sourcery/images/Dillons_Wizards-02.png' %}' alt=logo_image></button></a>
+            </div>
         </div>
         {% for resource in all_resources %}
         <div class="col-sm">
             <div class="card bg-dark text-white resource_card">
-                    <img class="card-img-top" src={{resource.image}} onError="this.onerror=null;this.src='{% static 'sourcery/images/witch-hat-blue.png' %}';" alt=card_image>
+                    <img class="card-img-top" src={{resource.image}} onError="this.onerror=null;this.src='{% static 'sourcery/images/Dillons_Wizards-05.png' %}';" alt=card_image>
                 <div class="card-body">
-                    <h5 class="card-title mb-4 text-center">{{ resource.title }}</h5>
-                    <h6>URL: {{resource.url}}</h6>
-                    <h6>Note: {{resource.note}}</h6>
-                    <div class="card-btn-group">
-                    <a class="card-link" href="{{resource.url}}"><button type="button" class="btn btn-outline-info mt-3">Go here</button></a>
-                    <a class="card-link" href="{% url 'sourcery:editResourceForm' resource.id %}"><button type="button" class="btn btn-outline-primary mt-3">Edit</button></a>
-                    <a class="card-link" href="{% url 'sourcery:deleteResource' resource.id %}"><button type="button" class="btn btn-outline-danger mt-3">Delete</button></a>
+                    <h5 class="mt-0 card-header">{{ resource.title }}</h5>
+                    <div>
+                        <p class="mt-1 card-text font-italic">{{resource.note}}</p>
+                        <div class="card-btn-group">
+                        <a class="card-link" href="{{resource.url}}"><button type="button" class="btn btn-outline-info mt-3">Go here</button></a>
+                        <a class="card-link" href="{% url 'sourcery:editResourceForm' resource.id %}"><button type="button" class="btn btn-outline-primary mt-3">Edit</button></a>
+                        <a class="card-link" href="{% url 'sourcery:deleteResource' resource.id %}"><button type="button" class="btn btn-outline-danger mt-3">Delete</button></a>
                     </div>
-
                 </div>
             </div>
         </div>
-            {% endfor %}
     </div>
+        {% endfor %}
+</div>  
+</div>
     {% else %}
-        <p>No Resources Available.</p>
+    <div class="firstresource_container">
+        <div class="add_first_header mb-2 mt-3 ">
+        <h5 class="text-center font-weight-bold">Begin adding resources to your Spellbook by clicking below</h5>
+        </div>
+        
+
+        <div class="addfirst_container text-center">
+        <a href="{% url 'sourcery:resourceForm' %}"><button type="button" class="btn btn-success add_firstresource_btn"><h5 class="add_resource_header">Add your First Resource</h5> <i class="fas fa-plus"></i></button></a>
+        </div>
+    </div>
     {% endif %}
 
-</div>
 {% endblock content %}

@@ -10,7 +10,7 @@ def resourceGrid(request, user_id, resource_type_id):
     current_user = request.user
     all_types = Resource_Type.objects.filter(user_id=current_user.id)
     all_resources = Resource.objects.filter(resource_type_id=resource_type_id)
-    context = { 'all_resources' : all_resources , 'all_types' : all_types }
+    context = { 'all_resources' : all_resources , 'all_types' : all_types}
     return render(request, 'sourcery/resourceGrid.html', context)
 
 def resourceForm(request):
