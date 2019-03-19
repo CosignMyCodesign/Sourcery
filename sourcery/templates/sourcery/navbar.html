@@ -7,6 +7,12 @@
             <img class="main_logo" src='{% static 'sourcery/images/Dillons_Wizards-04.png' %}' alt=logo_image>
         </div>
         <a class="navbar-brand main_header" href="{% url 'sourcery:index' %}">Sourcery</a>
+        {% if user.is_authenticated %}
+        <div class="greeting_container">
+        <h6 class="text-center greeting_header"> Greetings, {{ user.username }}. Let's make the magic happen!</h6>
+        </div>
+        {% else %}
+        {% endif %}
     </div>
     <div class="logo_navlink_div">
         <div class="nav_link_div">

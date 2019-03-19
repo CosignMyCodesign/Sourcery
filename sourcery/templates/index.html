@@ -28,14 +28,13 @@
       <div class="content">
         {% if user.is_authenticated %}
     </br>
-    <h2 class="mb-5 mt-5 text-center greeting_header"> Greetings, {{ user.username }}. Let's make the magic happen!</h2>
     <div class="add_spellbook_container">
     <form action="{% url 'sourcery:addResourceType' %}" method="post">
         <div class="form-group">
             {% csrf_token %}
             <label for="type_name"></label>
-            <input class="col-2 ml-3" type="text" name="resource_type_name" id="type_name" placeholder="Spellbook">
-            <input class="add_spellbook" type="submit" value="Add New Spellbook" />
+            <input class="col-2 ml-3" type="text" name="resource_type_name" id="type_name" placeholder="Add a New Spellbook">
+            <input class="add_spellbook font-weight-bold" type="submit" value="+" />
         </div>
     </form>   
     </div>

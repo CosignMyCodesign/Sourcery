@@ -12,10 +12,6 @@ html {
     font-size: xx-large;
 }
 
-.greeting_header{
-    font-family: 'Cinzel Decorative', cursive !important;
-}
-
 body {
     background: url(images/background2.png);
     display: flex;
@@ -260,3 +256,16 @@ a:hover {
 .note_text{
     font-size: 14px;
 }
+
+.greeting_container {
+    display:flex;
+}
+
+.greeting_container h6 {
+    align-self: flex-end;
+    color: white;
+    font-size: 14px;
+    color: #ffc107;
+    font-family: 'Cinzel Decorative', cursive !important;
+}
+
