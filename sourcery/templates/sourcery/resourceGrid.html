@@ -18,19 +18,20 @@
             <div class="card bg-dark text-white resource_card">
                     <img class="card-img-top" src={{resource.image}} onError="this.onerror=null;this.src='{% static 'sourcery/images/Dillons_Wizards-05.png' %}';" alt=card_image>
                 <div class="card-body">
-                    <h5 class="card-title mb-4 text-center">{{ resource.title }}</h5>
-                    <p class="m-0 note_text">Note: {{resource.note}}</p>
-                    <div class="card-btn-group">
-                    <a class="card-link" href="{{resource.url}}"><button type="button" class="btn btn-outline-info mt-3">Go here</button></a>
-                    <a class="card-link" href="{% url 'sourcery:editResourceForm' resource.id %}"><button type="button" class="btn btn-outline-primary mt-3">Edit</button></a>
-                    <a class="card-link" href="{% url 'sourcery:deleteResource' resource.id %}"><button type="button" class="btn btn-outline-danger mt-3">Delete</button></a>
+                    <h5 class="mt-0 card-header">{{ resource.title }}</h5>
+                    <div>
+                        <p class="mt-1 card-text font-italic">{{resource.note}}</p>
+                        <div class="card-btn-group">
+                        <a class="card-link" href="{{resource.url}}"><button type="button" class="btn btn-outline-info mt-3">Go here</button></a>
+                        <a class="card-link" href="{% url 'sourcery:editResourceForm' resource.id %}"><button type="button" class="btn btn-outline-primary mt-3">Edit</button></a>
+                        <a class="card-link" href="{% url 'sourcery:deleteResource' resource.id %}"><button type="button" class="btn btn-outline-danger mt-3">Delete</button></a>
                     </div>
-
                 </div>
             </div>
         </div>
-            {% endfor %}
     </div>
+        {% endfor %}
+</div>  
 </div>
     {% else %}
     <div class="firstresource_container">
