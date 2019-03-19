@@ -24,6 +24,7 @@ def resourceForm(request):
 def addResource(request):
 
     user = request.user
+    # resource = get_object_or_404(Resource, pk=resource_id)
     title = request.POST["resource_title"]
     url = request.POST["resource_url"]
     image = request.POST["resource_image"]
@@ -43,7 +44,7 @@ def addResource(request):
 
     )
 
-    return HttpResponseRedirect(reverse('sourcery:index'))
+    return HttpResponseRedirect(reverse('sourcery:resourceGrid', args=(resource_type_instance.id, user.id,)))
 
 
 def editResourceForm(request, resource_id):
