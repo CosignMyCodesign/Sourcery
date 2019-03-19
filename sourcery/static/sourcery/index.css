@@ -77,6 +77,7 @@ a:hover {
 .index_container {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 100px;
 }
 
 /* Resource Card Divs */
@@ -281,5 +282,15 @@ a:hover {
 .add_logo{
     max-height: 80% !important;
     max-width: 80% !important;
+}
+
+.add_resource_form{
+    width: 100%;
+    margin-left: 170px;
+}
+/* Add Resource Form Header */
+.form_header{
+    font-family: 'Cinzel Decorative', cursive !important;
+    margin-top: 10px;
 }
 
