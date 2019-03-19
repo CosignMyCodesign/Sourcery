@@ -43,7 +43,7 @@ def addResource(request):
 
     )
 
-    return HttpResponseRedirect(reverse('sourcery:index'))
+    return HttpResponseRedirect(reverse('sourcery:resourceGrid', args=(resource_type_instance.id, user.id,)))
 
 
 def editResourceForm(request, resource_id):

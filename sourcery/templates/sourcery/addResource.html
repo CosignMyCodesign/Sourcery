@@ -1,25 +1,36 @@
 {% extends "index.html" %}
 {% load staticfiles %}
 {% block content %}
-    <h1>Add Resource</h1>
-
-    <form action="{% url 'sourcery:addResource' %}" method="post">
+<div class="form_container">
+    <form class="add_resource_form" action="{% url 'sourcery:addResource' %}" method="post">
+        <h3 class="form_header text-center">Add Your New Resource</h3>
+        <div class="form-group">
             {% csrf_token %}
-            <label for="adding_resource">Resource</label>
-            Title:
-            <input type="text" name="resource_title" id="adding_resource">
-            URL:
-            <input type="text" name="resource_url" id="adding_resource">
-            Image Link:
-            <input type="text" name="resource_image" id="adding_resource">
-            Note:
-            <input type="text" name="resource_note" id="adding_resource">
-            <select name= type>
-                <option disabled selected>select a resource type</option>
+            <label class="add_form_label font-weight-bold " for="resource_title">Title</label>
+            <input type="text" name="resource_title" id="resource_title" class="form-control">
+        </div>
+        <div class="form-group">
+            <label class="add_form_label font-weight-bold " for="resource_url">URL</label>
+            <input type="text" name="resource_url" id="resource_url" class="form-control">
+        </div>
+        <div class="form-group">
+            <label class="add_form_label font-weight-bold " for="resource_image">Image URL</label>
+            <input type="text" name="resource_image" id="resource_image" class="form-control">
+        </div>
+        <div class="form-group">
+            <label class="add_form_label font-weight-bold " for="resource_note">Note</label>
+            <textarea name="resource_note" id="resource_note" class="form-control" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <select name= "type" class="form-control">
+                <option disabled selected>Select the Spellbook</option>
                 {% for type in all_types %}
                     <option value="{{type.id}}">{{type.name}}</option>
-                    {% endfor %}
+                {% endfor %}
             </select>
-            <input type="submit" value="Add Resource" />
-        </form>   
+        </div>
+        <button type="submit" value="Add Resource" class="btn btn-primary">Submit</button>
+    </form>   
+</div>
+    
   {% endblock %}

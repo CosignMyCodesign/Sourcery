@@ -70,13 +70,13 @@ a:hover {
 .type_container {
     display: flex;
     margin-top: 20px;
-    width: 20%
+    width: 20%;
 }
-
 
 .index_container {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 100px;
 }
 
 /* Resource Card Divs */
@@ -88,6 +88,8 @@ a:hover {
 /* Resource Cards */
 .resource_card {
     box-shadow: 10px 0 20px rgba(0, 0, 0, 0.25), 6px 0 6px rgba(0, 0, 0, 0.445);
+    width: 100%;
+    max-width: 300px;
 }
 /* Parent Resource Card/button container */
 .resource_container {
@@ -109,6 +111,7 @@ a:hover {
 .addfirst_container{
     margin-top: 50px;
     height: 300px;
+    margin-left: 32%;
 }
 
 /* Add Resource button with animation effects below */
@@ -125,6 +128,8 @@ a:hover {
 .add_resource_btn {
 
     height: 70%;
+    max-height: 400px;
+    max-width: 300px;
     width: 100%;
 	position: relative;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -165,26 +170,6 @@ a:hover {
     font-size: 16px;
 }
 
-/* @media (min-width:601px) {
-	.add_resource_btn {
-		padding:10px;
-		margin:5px;
-		font-size:8rem;
-	}
-}
-
-@media (min-width:993px) {
-	.add_resource_btn {
-		padding:20px;
-		margin:10px;
-		font-size:8rem;
-	}
-	.add_resource_btn:after {
-		border-width:3px;
-		top:-3px;
-		left:-3px;
-	}
-} */
 /* Image header in the cards */
 .card-img-top {
     height: 180px;
@@ -196,7 +181,6 @@ a:hover {
     width: 80px;
     height: 80px;
 }
-/* Spellbook Logo */
 
 .navbar {
     display:flex;
@@ -236,6 +220,7 @@ a:hover {
     color: white;
     font-family: 'Cinzel Decorative', cursive !important;
 }
+/* Add Spellbook button */
 .add_spellbook{
     background-color: #28a745;
     color: white;
@@ -252,15 +237,20 @@ a:hover {
 .add_first_header{
     height:20px;
 }
-
+/* ***Footer*** */
 .footer {
-    margin-top: 60px;
-    height: 100%;
+    margin-top: 5px;
+    height: 100px;
+}
+
+.footer_text{
+    color: white;
 }
 
 .content {
     flex: 1;
 }
+/* ***End Footer*** */
 
 .note_text{
     font-size: 14px;
@@ -275,11 +265,21 @@ a:hover {
     color: white;
     font-size: 1.3vw;
     color: #efc445;
-    font-family: 'Cinzel Decorative', cursive !important;
+    margin-left: -230px;
 }
 
 .add_logo{
-    max-height: 80% !important;
-    max-width: 80% !important;
+    max-height: 300px !important;
+    max-width: 250px !important;
+}
+
+.add_resource_form{
+    width: 100%;
+    margin-left: 170px;
+}
+/* Add Resource Form Header */
+.form_header{
+    font-family: 'Cinzel Decorative', cursive !important;
+    margin-top: 10px;
 }
 
