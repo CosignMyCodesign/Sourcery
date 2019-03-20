@@ -12,6 +12,10 @@ html {
     font-size: 34px;
 }
 
+.index_greeting{
+    font-family: 'Cinzel Decorative', cursive !important;
+}
+
 body {
     background: url(images/background2.png);
     display: flex;
