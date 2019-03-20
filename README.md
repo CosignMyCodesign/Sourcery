@@ -1,34 +1,97 @@
-# Welcome to Bangazon
+# Welcome to Sourcery developed by Dillon Williams
+----
+## What is Sourcery?
 
-This web application is the source code for the Bangazon e-commerce web site. It is powered by Python and Django.
+> Sourcery is a Django web-application created to aid in organizing your resources/bookmarks. As a student diving into the vast world of Software Development, I noticed my ever-growing list of folders and bookmarks were becoming more and more tedious to navigate through. Sourcery is here to to help resolve that issue. The idea was to give a clean user-interface that was easy to use but also had a fun design and feel to it. Users can register an account and add as many resource types/spellbooks as they would like and then create and assign resources (articles, videos, etc) to the resource types. The user has the ability to save notes and images associated with each resource to allow better organization and tracking. Within each resource cards users can either teleport to (go to), transform (edit), or vanish (delete) the resource. The "front-end" is fully constructed utilizing Django's templating system. Sourcery is fully CRUD capable. Data stored in SQLite 3 database.
 
-Students, you are inheriting a basic implementation that provides the following features:
+----
+## What technologies went into the application?
 
-1. User registration 
-1. User login 
-1. User logout 
-1. Adding a product 
-1. Listing products
+>  Python | Django | SQLite 3 | Bootstrap
 
-Please consult the backlog of issues and work with your product owner to implement the top priority tickets for your sprints.
+----
 
-## To begin work
+![SourceryScreenshot1](sourcery/static/sourcery/images/sourcery-snippet.PNG)
 
-1. The team lead should clone this repository, then push it to your team's Github repo.
-1. Alert your manager when this is complete and all backlog issues will be imported into your project.
-1. Each teammate should clone the repository.
-1. In the `djangazon` directory that gets created, run the migrations with `python manage.py migrate`
+![SourceryScreenshot2](sourcery/static/sourcery/images/sourcery-snippet2.PNG)
 
-## Helpful Resources
 
-### Django Models and Migrations
+## Entity Relationship Diagram
+![Sourcery ERD](sourcery/static/sourcery/images/ERD-snippet.PNG "Sourcery ERD")
 
-Using the requirements above create a [model](https://docs.djangoproject.com/en/1.10/topics/db/models/) for each resource, and use [migrations](https://docs.djangoproject.com/en/1.10/topics/migrations/) to ensure your database structure is up to date.
+# Installing Core Technologies
 
-### Templates
+## 1. SQLite
 
-[Django template language](https://docs.djangoproject.com/en/1.10/ref/templates/language/)
+### For OSX Users
 
-### Form Helpers
+```
+brew install sqlite
+```
 
-Django has many built-in [helper tags and filters](https://docs.djangoproject.com/en/1.10/ref/templates/builtins/) when building the site templates. We strongly recommend reading this documentation while building your templates.
+### For Windows Users
+
+Visit the [SQLite downloads](https://www.sqlite.org/download.html) and download the 64-bit DLL (x64) for SQLite version, unzip and install it.
+
+## 2. SQL Browser
+
+The [DB browser for SQLite](http://sqlitebrowser.org/) will let you view, query and manage your databases for this project.
+
+## 3. Visual Studio Code
+
+[Visual Studio Code](https://code.visualstudio.com/download) is Microsoft's cross-platform editor that you can use to view Python and Django code.
+
+# Setting up environment and installing dependencies
+
+## 1. Set up your virtual environment
+
+Within the terminal, navigate to the location where you'd like to create the new environment and Sourcery project. Create a folder called Sourcery and navigate within the new folder. Then, enter this text to create the new environment:
+```
+virtualenv ENV
+```
+Then activate your environment:
+```
+source ENV/bin/activate
+```
+Note that you can type "deactivate" to end the new environment at any time.
+
+## 2. Install Django
+
+Within your new Sourcery folder (and with the virtual env activated), download Django by typing:
+```
+pip install django
+```
+
+## 3. Download the Sourcery project
+
+Within your new Sourcery project folder, download the source code by typing:
+```
+git clone git@github.com:CosignMyCodesign/Sourcery.git
+```
+
+## 4. Starting the project server
+
+After downloading the Sourcery project, you should have a new folder within the Sourcery Project folder that you created. The new folder will also be called sourcery.  Navigate within this folder.  Start the server by typing:
+```
+python manage.py runserver
+```
+
+## 5. Navigate to the Sourcery webpage
+
+Within your web browser, navigate to http://localhost:8000/
+
+From here, you should see the login / register view for the application.
+
+
+# Creating the Sourcery DB
+
+While inside the Sourcery/sourcery folder, enter this command:
+```
+python manage.py makemigrations sourcery
+```
+Then enter
+```
+python manage.py migrate
+```
+You now have a database named sqlite3.sql within your existing folder.  Use the DB Browser for SQLite to open the new database if desired.
+
