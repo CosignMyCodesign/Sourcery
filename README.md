@@ -2,13 +2,14 @@
 ----
 ## What is Sourcery?
 
-> Sourcery is a Django web-application created to aid in organizing your resources/bookmarks. As a student diving into the vast world of Software Development, I noticed my ever-growing list of folders and bookmarks were becoming more and more tedious to navigate through. Sourcery is here to to help resolve that issue. The idea was to give a clean user-interface that was easy to use but also had a fun design and feel to it. Users can register an account and add as many resource types/spellbooks as they would like and then create and assign resources (articles, videos, etc) to the resource types. The user has the ability to save notes and images associated with each resource to allow better organization and tracking. Within each resource cards users can either teleport to (go to), transform (edit), or vanish (delete) the resource. The "front-end" is fully constructed utilizing Django's templating system. Sourcery is fully CRUD capable. Data stored in SQLite 3 database.
+> Sourcery is a Django web-application created to aid in organizing your resources/bookmarks. As a student diving into the vast world of Software Development, I noticed my ever-growing list of folders and bookmarks were becoming more and more tedious to navigate through. Sourcery is here to to help resolve that issue. The idea was to give a clean user-interface that was easy to use but also had a fun design and feel to it. Users can register an account and add as many resource types/spellbooks as they would like and then create and assign resources (articles, videos, etc) to the resource types. The user has the ability to save notes and images associated with each resource to allow better organization and tracking. Within each resource card users can either teleport to (go to), transform (edit), or vanish (delete) the resource. The "front-end" is fully constructed utilizing Django's templating system. Sourcery is fully CRUD capable. Data stored in SQLite 3 database.
 
 ----
 ## What technologies went into the application?
 
 >  Python | Django | SQLite 3 | Bootstrap
 
+### Login/Auth cloned down from another school project (Joe Shephard and Steve Brownlee shown as contributors for this)
 ----
 
 ![SourceryScreenshot1](sourcery/static/sourcery/images/sourcery-snippet.PNG)
@@ -94,3 +95,4 @@ Then enter
 python manage.py migrate
 ```
 You now have a database named sqlite3.sql within your existing folder.  Use the DB Browser for SQLite to open the new database if desired.
+
