@@ -9,6 +9,7 @@
 
 >  Python | Django | SQLite 3 | Bootstrap
 
+### Login/Auth cloned down from another school project (Joe Shephard and Steve Brownlee shown as conributors for this)
 ----
 
 ![SourceryScreenshot1](sourcery/static/sourcery/images/sourcery-snippet.PNG)
@@ -94,4 +95,5 @@ Then enter
 python manage.py migrate
 ```
 You now have a database named sqlite3.sql within your existing folder.  Use the DB Browser for SQLite to open the new database if desired.
+
 
