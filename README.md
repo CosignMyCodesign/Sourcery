@@ -96,4 +96,3 @@ python manage.py migrate
 ```
 You now have a database named sqlite3.sql within your existing folder.  Use the DB Browser for SQLite to open the new database if desired.
 
-
