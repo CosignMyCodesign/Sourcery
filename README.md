@@ -1,5 +1,5 @@
 # Welcome to Sourcery developed by Dillon Williams
-> Login/Auth cloned down from another school project (Instructors Joe Shephard and Steve Brownlee are shown as contributors for this)
+
 ----
 ## What is Sourcery?
 
@@ -95,4 +95,7 @@ Then enter
 python manage.py migrate
 ```
 You now have a database named sqlite3.sql within your existing folder.  Use the DB Browser for SQLite to open the new database if desired.
+
+# Credits
+> Login/Auth cloned down from another school project (Instructors Joe Shephard and Steve Brownlee are shown as contributors for this)
 
