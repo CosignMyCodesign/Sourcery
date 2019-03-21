@@ -9,7 +9,7 @@
 
 >  Python | Django | SQLite 3 | Bootstrap
 
-### Login/Auth cloned down from another school project (Joe Shephard and Steve Brownlee shown as conributors for this)
+### Login/Auth cloned down from another school project (Joe Shephard and Steve Brownlee shown as contributors for this)
 ----
 
 ![SourceryScreenshot1](sourcery/static/sourcery/images/sourcery-snippet.PNG)
