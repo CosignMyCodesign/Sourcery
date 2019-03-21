@@ -1,4 +1,5 @@
 # Welcome to Sourcery developed by Dillon Williams
+> Login/Auth cloned down from another school project (Instructors Joe Shephard and Steve Brownlee are shown as contributors for this)
 ----
 ## What is Sourcery?
 
@@ -9,7 +10,6 @@
 
 >  Python | Django | SQLite 3 | Bootstrap
 
-> Login/Auth cloned down from another school project (Instructors Joe Shephard and Steve Brownlee are shown as contributors for this)
 ----
 
 ![SourceryScreenshot1](sourcery/static/sourcery/images/sourcery-snippet.PNG)
